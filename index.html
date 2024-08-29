@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>js/jq</title>
+	<!--css links-->
+	<link rel="stylesheet"href="css/bootstrap.css">
+	<link rel="stylesheet"href="css/style.css">
+	<link rel="stylesheet"href="css/media.css">
+</head>
+<body>
+<div class="container">
+  <!--example1-->
+  <h2 class="text-danger">click the button to change the text </h2>
+  <button onclick="textChange()" type="button" class="btn btn-dark">TextChange</button>
+  <h3 id="tc">hello</h3>
+
+
+   <!--example2--><hr>
+    <h2 class="text-danger">click the button to show the date </h2>
+    <button onclick="showDate()"type="button" class="btn btn-dark" >ShowDate</button>
+    <h3 id="sd">the date is</h3>
+
+ <!--example3--><hr>
+
+ <h2 class="text-danger">click the button to on/off the bulb </h2>
+ <button onclick="bulbOn()" type="button" class="btn btn-success">bulbOn</button>
+
+ <button onclick="bulbOff()" type="button" class="btn btn-danger">bulbOff</button>
+ <img id="bulb" src="images/off.gif">
+   
+
+
+<!--example4--><hr>
+
+ <h2 class="text-danger">click the button to change the style</h2>
+<button onclick="changeCss()" type="button"
+class="btn btn-dark">change css</button>
+<h3 id="css">hello</h3>
+
+<!--example5--><hr>
+
+ <h2 class="text-danger">click the button to show/hide the content</h2>
+<button onclick="textShow()" type="button"
+class="btn btn-success">show</button>
+<button onclick="textHide()" type="button"
+class="btn btn-danger">hide</button>
+<h3 id="csh">hello</h3>
+
+<!--example6--><hr>
+
+ <h2 class="text-danger">click the button to change the font size</h2>
+<button onclick="changeFont_size()" type="button"class="btn btn-dark">change font size</button>
+<h3 id="fc">hello</h3>
+
+
+
+<!--example7--><hr>
+<h2 class="text-danger">click the button to change the emoji </h2>
+ <button onclick="smile()" type="button" class="btn btn-success">happy</button>
+
+ <button onclick="sad()" type="button" class="btn btn-dark">sad</button>
+ <img id="emoji" src="images/smile.jpg">
+
+
+<!--example8--><hr>
+
+ <h2 class="text-danger">click the button to change the background color</h2>
+<button onclick="changeBgc()" type="button"class="btn btn-dark">change background color</button>
+<h3 id="fbcg">hello</h3>
+
+
+<!--example9--><hr>
+<h2 class="text-danger">click the button to show/hide a picture </h2>
+
+ 
+ 
+ <button onclick="picShow()" type="button" class="btn btn-success">show</button>
+<button onclick="picHide()" type="button"
+class="btn btn-danger">hide</button>
+ <img id="sc" src="images/d3.png">
+
+<!--example10--><hr>
+
+<h2 class="text-danger">click the button to show/hide the background color </h2>
+
+
+<button onclick="show()" type="button" class="btn btn-success">show</button>
+<button onclick="hide()" type="button"
+class="btn btn-danger">hide</button>
+
+<h3 id="scbs">hello</h3>
+
+<!--example11--><hr>
+<h2 class="text-danger">click the button for border </h2>
+
+<button onclick="changeBorder()" type="button"class="btn btn-dark">change border</button>
+<h3 id="cb">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure</h3>
+
+<!--example12--><hr>
+<h2 class="text-danger">click the button to show/hide the border </h2>
+<button onclick="bShow()" type="button" class="btn btn-success">show</button>
+<button onclick="bHide()" type="button"
+class="btn btn-danger">hide</button>
+
+<h3 id="bb">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure</h3>
+<!--example13--><hr>
+<h2 class="text-danger">click the button to align the content </h2>
+
+<button onclick="alignItem()" type="button"class="btn btn-dark">center</button>
+<h3 id="ai">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</h3>
+
+
+<!--example14--><hr>
+<h2 class="text-danger">click the button to show the background image </h2>
+
+<button onclick="bcgImg()" type="button"class="btn btn-dark">back image</button>
+<h3 id="bimg">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure</h3>
+
+<!--example15--><hr>
+
+<h2 class="text-danger">click the button to change the animation</h2>
+<button onclick="ca()" type="button"class="btn btn-dark">try it</button>
+
+
+<div id="myDIV"></div>
+
+<!--example16--><hr>
+<h2 class="text-danger">click the button to delay the animation</h2>
+<button onclick="cda()" type="button"class="btn btn-dark">try it</button>
+<div id="mDiv"></div>
+
+
+<!--example17--><hr>
+<h2 class="text-danger">click the button to show the background clip </h2>
+
+<button onclick="bcgClip()" type="button"class="btn btn-dark">try</button>
+<h3 id="bclip">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodLorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod
+tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat Duis aute irure</h3>
+
+
+<!--example18--><hr>
+<h2 class="text-danger">click the button to show the background position </h2>
+
+<button onclick="bcgPos()" type="button"class="btn btn-dark">try</button>
+
+
+
+
+
+<h3 id="bmg" style="
+background-image:url('images/d3.png');background-repeat:no-repeat;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure</h3>
+
+
+<!--example19--><hr>
+<h2 class="text-danger">click the button to show the background position </h2>
+
+<button onclick="bcgSize()" type="button"class="btn btn-dark">try</button>
+<h3 id="bs" style="
+background-image:url('images/d3.png');background-repeat:no-repeat;">Lorem ipsum dolor sit amet, </h3>
+
+
+
+<!--example20--><hr>
+<h2 class="text-danger">click the button to show the back face </h2>
+<div id="bf">
+  <h1>Hello</h1>
+</div>
+
+<input type="checkbox" onclick="myFunction(this)" checked>reveal
+
+<!--example21--><hr>
+<h2 class="text-danger">click the button for border bottom </h2>
+
+<button onclick="changeBot()" type="button"class="btn btn-dark">try</button>
+<h3 id="cbb">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure</h3>
+
+<!--example22--><hr>
+<h2 class="text-danger">click the button for  left border radius </h2>
+
+<button onclick="changeBor()" type="button"class="btn btn-dark">try</button>
+<h3 id="cbbr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco</h3>
+<!--example23--><hr>
+<h2 class="text-danger">click the button for  right border radius </h2>
+
+<button onclick="changeBorr()" type="button"class="btn btn-dark">try</button>
+<h3 id="cbbrr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco</h3>
+
+<!--example24--><hr>
+<h2 class="text-danger">click the button for border bottom style</h2>
+
+<button onclick="changeBots()" type="button"class="btn btn-dark">try</button>
+<h3 id="cbbs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</h3>
+
+<!--example25--><hr>
+<h2 class="text-danger">click the button for border bottom width</h2>
+
+<button onclick="changeBotw()" type="button"class="btn btn-dark">try</button>
+<h3 id="cbbw">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</h3>
+
+
+<!--example26--><hr>
+<h2 class="text-danger">click the button for border left</h2>
+<button onclick="changeBorl()" type="button"class="btn btn-dark">try</button>
+
+<h3 id="cbbl">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</h3>
+
+<!--example27--><hr>
+<h2 class="text-danger">click the button for border left style</h2>
+<button onclick="changeBorls()" type="button"class="btn btn-dark">try</button>
+
+<h3 id="cbbls">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</h3>
+
+<!--example28--><hr>
+<h2 class="text-danger">click the button for border right</h2>
+<button onclick="changeBorr()" type="button"class="btn btn-dark">try</button>
+
+<h3 id="cbbrrr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</h3>
+
+<!--example29--><hr>
+<h2 class="text-danger">click the button for border right style</h2>
+<button onclick="changeBorrrs()" type="button"class="btn btn-dark">try</button>
+
+<h3 id="cbbrrrs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</h3>
+
+<!--example30-->
+<hr>
+<h2 class="text-danger">click the button for box shadow</h2>
+<button onclick="changeBoxs()" type="button"class="btn btn-dark">try</button>
+<h3 id="cboxs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.</h3>
+
+<!--example31-->
+<h2 class="text-danger">click the button to flow the text</h2>
+
+<p id="demo">hello guys.</p>
+
+<button type="button" onclick="myFunction()">Let text flow from right to left</button>
+
+<!--example32--><hr>
+
+<h2 class="text-danger">click the button for the display property</h2>
+
+<p id="dem">hello guys.</p>
+
+<button type="button" onclick="myFunction()">try</button>
+
+<!--example33--><hr>
+
+<h2 class="text-danger">click the button to change the font-family</h2>
+
+<p id="ff">Hello guys.</p>
+
+<button type="button" onclick="myFunction()">try</button>
+
+
+<!--example34--><hr>
+
+<h2 class="text-danger">click the button to change the font-style</h2>
+
+<p id="fs">Hello guys.</p>
+
+<button type="button" onclick="myFunctions()">try</button>
+<!--example35--><hr>
+
+<h2 class="text-danger">click the button to change the font-variant</h2>
+
+<p id="fv">Hello guys.</p>
+
+<button type="button" onclick="myFunctionv()">try</button>
+
+
+<!--example36--><hr>
+
+<h2 class="text-danger">click the button to change the font-weight</h2>
+
+<p id="fw">Hello guys.</p>
+
+<button type="button" onclick="myFunctionw()">try</button>
+
+
+
+<!--example37--><hr>
+
+<h2 class="text-danger">click the button to change the height</h2>
+
+<button type="button" id="myBtn" onclick="myFunctionb()">hello guys.</button>
+
+
+
+<!--example38--><hr>
+
+<h2 class="text-danger">click the button to justify content</h2>
+
+<button type="button" id="myBtn" onclick="myFunctionbx()">try</button>
+
+
+<div id="box">
+  <div style="background-color:coral;"></div>
+  <div style="background-color:lightblue;"></div>
+  <div style="background-color:khaki;"></div>
+  <div style="background-color:pink;"></div>
+</div>
+
+<!--example39--><hr>
+<h2 class="text-danger">click the button for list style</h2>
+
+<button type="button" id="myBtn" onclick="myFunctionl()">try</button>
+
+<ul id="myList">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Water</li>
+  <li>Soda</li>
+</ul>
+
+
+
+
+<!--example40--><hr>
+<h2 class="text-danger">click the button for list style position</h2>
+
+<button type="button" id="myBtn" onclick="myFunctionlp()">try</button>
+
+<ul id="myUL">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Water</li>
+  <li>Soda</li>
+</ul>
+
+<!--example41--><hr>
+<h2 class="text-danger">click the button for list style property</h2>
+
+<button type="button" id="myBtn" onclick="myFunctionpr()">try</button>
+
+<ul id="myULI">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Water</li>
+  <li>Soda</li>
+</ul>
+
+<!--example42--><hr>
+
+<h2 class="text-danger">click the button to set the margin</h2>
+
+<div id="mr">hello guys</div>
+
+
+<button type="button" id="myBtn" onclick="myFunctionm()">try</button>
+
+
+
+<!--example43--><hr>
+
+<h2 class="text-danger">click the button to set the margin bottom</h2>
+
+<div id="mb">hello guys</div>
+
+
+<button type="button" id="myBtn" onclick="myFunctionmb()">try</button>
+
+
+
+<!--example44--><hr>
+
+<h2 class="text-danger">click the button to set the margin left</h2>
+
+<div id="ml">hello guys</div>
+
+
+<button type="button" id="myBtn" onclick="myFunctionml()">try</button>
+
+<!--example45--><hr>
+
+<h2 class="text-danger">click the button to set the margin right</h2>
+
+<div id="mrr">hello guys</div>
+
+
+<button type="button" id="myBtn" onclick="myFunctionmrr()">try</button>
+
+<!--example46--><hr>
+
+<h2 class="text-danger">click the button to set the margin top</h2>
+
+<div id="mt">hello guys</div>
+
+
+<button type="button" id="myBtn" onclick="myFunctionmt()">try</button>
+
+<!--example47--><hr>
+
+<h2 class="text-danger">click the button to set the max-height</h2>
+<button type="button" id="myBtn" onclick="myFunctionmh()">try</button>
+
+<div id="mh">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+</div>
+<!--example48--><hr>
+
+<h2 class="text-danger">click the button to change the text decoration</h2>
+
+<button type="button" id="myBtn" onclick="myFunctiontd()">try</button>
+
+<p id="td">This is a paragraph.</p>
+
+<!--example49--><hr>
+
+<h2 class="text-danger">click the button to change the text decoration color</h2>
+
+<button type="button" id="myBtn" onclick="myFunctiontdc()">try</button>
+
+<p id="tdc">This is a paragraph.</p>
+
+<!--example50--><hr>
+
+<h2 class="text-danger">click the button to transform the text</h2>
+
+<button type="button" id="myBtn" onclick="myFunctiontt()">try</button>
+
+<p id="tt">This is a paragraph.</p>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<!--script links-->
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
